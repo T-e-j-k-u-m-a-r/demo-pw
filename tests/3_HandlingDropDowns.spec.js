@@ -6,8 +6,6 @@ test(`Handling Dropdowns`, async ({page}) =>{
 
     await page.waitForSelector(`select#dropdown-class-example`)
 
-    await page.locator(`select#dropdown-class-example`).selectOption(`Option1`)
-
     // Print all dropdown values
     const dropdown_values = await page.$$(`select#dropdown-class-example option`)
 
@@ -17,10 +15,17 @@ test(`Handling Dropdowns`, async ({page}) =>{
     // Click on specific dropdown valus using looping 
     for (const ele of dropdown_values) {
         
-        console.log(await ele.textContent())
+        const val = await ele.textContent();
+
+        console.log(val)
+
+        if(val === 'Option1'){
+            await page.locator(`select#dropdown-class-example`).selectOption(val)
+        }
 
     }
 
+    await page.waitForTimeout(20000)
 
     await page.close();
 
