@@ -1,0 +1,22 @@
+{
+  "name": "demo-pw",
+  "version": "1.0.0",
+  "description": "demo-pw",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-e-j-k-u-m-a-r/demo-pw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-e-j-k-u-m-a-r/demo-pw/issues"
+  },
+  "homepage": "https://github.com/T-e-j-k-u-m-a-r/demo-pw#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2"
+  }
+}
