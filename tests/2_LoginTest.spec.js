@@ -15,12 +15,13 @@ test(`Login Test`, async ({page}) =>{
 
     const pageTitle = await page.url();
     console.log(`App title - Post login: ${pageTitle}`)
-
-    // Verify the login success from url level
-    await expect(page.url()).not.toContain(`/auth/login`)
     
     // Verify the login success from home page element assertion 
+    await page.waitForSelector(`//h6[normalize-space()='Dashboard']`)
     await page.locator(`//h6[normalize-space()='Dashboard']`).isVisible()
+
+       // Verify the login success from url level
+    await expect(page.url()).not.toContain(`/auth/login`)
 
     // Logout
     await page.locator(`//p[@class='oxd-userdropdown-name']`).click()
