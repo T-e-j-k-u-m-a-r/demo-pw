@@ -9,7 +9,8 @@
     "url": "git+https://github.com/T-e-j-k-u-m-a-r/demo-pw.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tejkumar Kempaiah",
+  "type":"module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/T-e-j-k-u-m-a-r/demo-pw/issues"
