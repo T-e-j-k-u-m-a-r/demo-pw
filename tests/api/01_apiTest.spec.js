@@ -7,6 +7,7 @@ test.only(`GET Call`, async ({request}) => {
 
     // console.log(responseBody)
     expect(responseBody.length).toBe(10)
+    expect(Array.isArray(responseBody)).toBeTruthy();
 
     const firstObj = responseBody[0];
 
